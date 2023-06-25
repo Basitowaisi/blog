@@ -5,6 +5,8 @@ import PreviewSuspense from "@/components/PreviewSuspense"
 import PreviewBlogList from "@/components/PreviewBlogList"
 import BlogList from "@/components/BlogList"
 
+export const revalidate = 3600
+
 const query = groq`
   *[_type == "post"] {
     ..., //get all the fields
